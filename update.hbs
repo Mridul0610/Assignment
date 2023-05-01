@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+  body{
+   background: rgb(225, 192, 206);
+   background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,204,233,1) 100%);;
+  }
+  h1{
+    margin-left: 200px;
+    font-size: 45px;
+  }
+  form{
+    font-size: 22px;
+    font-weight: 600;
+    margin-left: 100px;
+    background-color:azure ;
+    border-radius: 20px;
+  }
+  .update{
+    margin: 100px 400px;
+  }
+  button:hover{
+    background-color: black;
+    color: aliceblue;
+  }
+  button{
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px 30px;
+    font-size: 18px;
+    margin-top: 10px;
+  }
+</style>
+<body>    
+  
+   <div class="update">
+   <h1>Make Changes Here!</h1><br>
+   <form action="/update" method="post">
+   <label>id : </label>
+   <input type="text" name="id" placeholder="Enter the name" value="{{data._id}}"><br>
+   <label>Name : </label>
+   <input type="text" name="name" placeholder="Enter the name" value="{{data.name}}"><br>
+   <label>Age : </label>
+   <input type="number" name="age" placeholder="Enter the age" value="{{data.age}}"><br> 
+   <label>Salary : </label>
+   <input type="string" name="salary" placeholder="Enter the salary" value="{{data.salary}}"><br>
+   <label>Department Name : </label>
+   <textarea name="department" rows="3" cols="33"value="{{data.department}}"></textarea><br> <br> 
+   <label>Email : </label>
+   <input type="email" name="email" placeholder="Enter the email" value="{{data.email}}"><br>  
+   <center> <button type="submit">update</button></center>
+  </form></div>
+</body>
+</html>

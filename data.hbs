@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+<style>
+   body{
+   background: rgb(225, 192, 206);
+   background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,204,233,1) 100%);;
+  }
+  table,th,tr,td{
+        border:2px solid black;
+        border-collapse: collapse;
+  }
+  table{
+    background-color: azure;
+  }
+  th{
+    padding: 10px 10px;
+    font-size: 22px;
+  }
+  tr{
+    font-size: 18px;
+  }
+  h1{
+    margin-left: 200px;
+    font-size: 45px;
+  }
+  button:hover{
+    background-color: black;
+    color: aliceblue;
+  }
+  button{
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px 30px;
+    font-size: 18px;
+  }
+  .content{
+    margin: 100px 400px;
+  }
+    </style>
+</head>
+<body>
+  <div class="content">
+    <h1>Employee Table</h1>
+       <table>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Salary</th>
+        <th>Depatment</th>
+        <th>Email</th>
+        <th>Action</th>
+        <th>Action</th>
+            {{#each data}}
+        <tr>
+            <td>{{name}}</td>
+            <td>{{age}}</td>
+            <td>{{salary}}</td>
+            <td>{{department}}</td>
+            <td>{{email}}</td>
+           
+            <td><a href="/delete/{{_id}}"><button>Delete</button></td>
+            <td><a href="/Update/{{_id}}"><button>Update</button></td>
+
+        </tr>
+    {{/each}}
+       </table>
+       <br>
+       <button><a href="http://localhost:3000">go back</a></button></div>
+    
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  body{
+   background: rgb(225, 192, 206);
+   background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,204,233,1) 100%);;
+  }
+  #p{
+    display: none;
+  }
+  h1{
+    justify-content: center;
+    color:black;
+    text-decoration: solid;
+    font-size: 60px;
+  }
+  form{
+    display: block;
+  }
+  .main{
+    display: flex;
+    justify-content: center;
+    margin-top: 150px;
+    gap: 200px
+  }
+  .employee p{
+    font-size: 50px;
+    line-height: 50px;
+    font-weight: 700;
+    text-decoration: double
+  }
+  .details{
+    font-size: 40px;
+    line-height: 50px;
+    font-weight: 700;
+    background-color: rgb(238,174,202);
+    border-radius: 20px;
+  }
+  button:hover{
+    background-color: black;
+    color: aliceblue;
+  }
+  button{
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px 10px;
+    font-size: 18px;
+    margin-left: 50px;
+  }
+  input{
+    border-radius: 10px;
+    padding: 10px;
+  }
+
+</style>
+</html>
+<body>
+   <center> <h1 >Registeration Form</h1></center>
+   <div class="main">
+    <div class="employee">
+      <p>Enter <br>your<br> Details</p>
+    </div>
+   <div class="details"> 
+   <form action="/register" method="post">
+   <label>Employee Name: </label>
+   <input type="text" name="name" placeholder="Enter the name"><br>
+   <label>Age: </label>
+   <input type="number" name="age" placeholder="Enter the age"><br> 
+   <label>Salary: </label>
+   <input type="string" name="salary" placeholder="Enter the salary"><br>
+   <label>Department Name: 
+   <textarea type="string" name="department" rows="3" cols="33">
+   </textarea></label>     <br>
+   <label>Email: </label>
+   <input type="email" name="email" placeholder="Enter the email"><br>
+      <button type="submit">submit</button>
+      <button><a href="http://localhost:3000/find"> Show Data</button></a>
+    </form> 
+    </div> 
+    </div>
+    <br>
+    <p id="p">{{data}}</p> 
+    <script>
+      let x=  document.getElementById("p")
+      if(x){
+        alert(x.innerHTML)
+
+      }
+    </script> 
+</body>
+</html>
